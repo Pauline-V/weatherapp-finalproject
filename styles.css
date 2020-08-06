@@ -24,9 +24,6 @@ ul {
   list-style: none;
 }
 
-#submitSearch {
-}
-
 .currentCity {
   font-weight: bold;
   font-size: 38px;
@@ -45,13 +42,4 @@ ul {
 
 .forecast {
   font-size: 25px;
-}
-
-#changeToCelsius {
-}
-
-#changeToFahr {
-}
-
-#changetoCurrentLoc {
 }
