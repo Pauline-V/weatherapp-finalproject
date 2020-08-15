@@ -4,57 +4,167 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Weather App!</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="container">
       <span class="fullDoc">
-        <form class="searchCity">
-          <input
-            type="search"
-            placeholder="Search new city"
-            autocomplete="off"
-          />
-          <button id="submitSearch">Search</button>
-        </form>
+        <div class="float-right">
+          <form class="form-inline" id="searchCity">
+            <input
+              class="form-control mx-sm-3 mb-2"
+              type="search"
+              placeholder="Search new city"
+              autocomplete="off"
+            />
+            <button type="button" class="btn btn-info mb-2" id="submitSearch">
+              Search</button
+            ><button
+              type="button"
+              class="btn btn-info mb-2"
+              id="changetoCurrentLoc"
+            >
+              🧭
+            </button>
+          </form>
+        </div>
+
+        <br /><br />
+        <h1 class="currentCity">Paris</h1>
+        <h3 class="currentDate">Jeudi 6 Aout, 19:40</h3>
+
         <div class="row">
-          <div class="col-5">
-            <h1 class="currentCity">Paris</h1>
-            <h3 class="currentDate">Jeudi 6 Aout, 19:40</h3>
-            <h2 class="currentTemp">☀️ 30°</h2>
-          </div>
-          <div class="col-5">
+          <div class="col" id="currentDetails">
             <ul>
-              <li id="feelsLike">Feels like 32°C</li>
-              <li id="humidity">Humidity 30%</li>
-              <li id="wind">Wind 4mph</li>
+              <li>Feels like <span id="feelsLike"> 32°C</span></li>
+              <li>Humidity <span id="humidity"> 30%</span></li>
+              <li>Wind <span id="wind">4mph</span></li>
+              <li class="currentTemp">30</li>
             </ul>
           </div>
+          <div class="col">
+            <img
+              src="weather_icons_dovora_interactive/PNG/128/day_clear.png"
+              id="currentEmoji"
+            />
+          </div>
         </div>
+        <br />
         <h2 class="forecast">
           Forecast
         </h2>
+        <hr />
 
-        <p>Friday ☀️ 34°C</p>
-        <p>Saturday ⛈ 37°C</p>
-        <p>Sunday ⛅️ 28°C</p>
-        <p>Monday ☀️ 29°C</p>
-
-        <button id="changeToCelsius">°C</button>
-        <button id="changeToFahr">°F</button>
-        <button id="changetoCurrentLoc">Current Location</button>
-        <script src="script.js"></script>
+        <div class="card-deck">
+          <div
+            class="card"
+            style="
+              text-align: center;
+              background-color: #ffffff;
+              border-radius: 10px;
+            "
+          >
+            <div class="card-body">
+              <h5 class="card-title">Friday</h5>
+              <div class="card-text">
+                <img
+                  src="weather_icons_dovora_interactive/PNG/128/cloudy.png"
+                  class="forecastEmoji"
+                />
+                <div class="forecastTemp">34</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="
+              text-align: center;
+              background-color: #ffffff;
+              border-radius: 10px;
+            "
+          >
+            <div class="card-body">
+              <h5 class="card-title">Saturday</h5>
+              <div class="card-text">
+                <img
+                  src="weather_icons_dovora_interactive/PNG/128/rain_thunder.png"
+                  class="forecastEmoji"
+                />
+                <div class="forecastTemp">37</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="
+              text-align: center;
+              background-color: #ffffff;
+              border-radius: 10px;
+            "
+          >
+            <div class="card-body">
+              <h5 class="card-title">Sunday</h5>
+              <div class="card-text">
+                <img
+                  src="weather_icons_dovora_interactive/PNG/128/day_partial_cloud.png"
+                  class="forecastEmoji"
+                />
+                <div class="forecastTemp">28</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="
+              text-align: center;
+              background-color: #ffffff;
+              border-radius: 10px;
+            "
+          >
+            <div class="card-body">
+              <h5 class="card-title">Monday</h5>
+              <div class="card-text">
+                <img
+                  src="weather_icons_dovora_interactive/PNG/128/day_clear.png"
+                  class="forecastEmoji"
+                />
+                <div class="forecastTemp">29</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="changeUnit">
+          <button
+            type="button"
+            class="btn btn-info btn-sm"
+            id="changeToCelsius"
+          >
+            °C
+          </button>
+          <button type="button" class="btn btn-info btn-sm" id="changeToFahr">
+            °F
+          </button>
+        </div>
       </span>
+      <footer>
+        <a
+          href="https://github.com/Pauline-V/weatherapp-finalproject"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Pauline Vanier
+      </footer>
+      <script src="script.js"></script>
     </div>
   </body>
 </html>

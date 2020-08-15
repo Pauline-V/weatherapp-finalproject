@@ -1,23 +1,19 @@
 body {
-  font-family: "Nova Mono", monospace;
-}
-.searchCity {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 10px;
-}
-.fullDoc {
-  display: block;
-  border: 1px solid #000;
-  border-radius: 20px;
-  margin: 50px auto;
-  padding: 20px 30px;
-  max-width: 800px;
+  font-family: "Montserrat", sans-serif;
 }
 
-p {
-  text-decoration: underline;
+.fullDoc {
+  display: block;
+  border: 1px solid #b8b8b8;
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  max-width: 700px;
+  background-color: #87d4c5;
+}
+
+#submitSearch {
+  margin-right: 10px;
 }
 
 ul {
@@ -27,19 +23,51 @@ ul {
 .currentCity {
   font-weight: bold;
   font-size: 38px;
+  margin-left: 38px;
 }
 
 .currentDate {
   font-size: 15px;
   font-style: italic;
   font-weight: lighter;
+  margin-left: 38px;
+}
+
+#currentDetails {
+  font-size: 15px;
+  display: block;
 }
 
 .currentTemp {
   font-weight: bold;
-  font-size: 34px;
+  font-size: 40px;
+}
+#currentEmoji {
+  width: 100px;
 }
 
+.card-title {
+  font-size: 18px;
+}
 .forecast {
   font-size: 25px;
+  font-style: italic;
+}
+.forecastTemp {
+  font-size: 18px;
+}
+
+.forecastEmoji {
+  width: 65px;
+  display: block;
+  margin: 0 auto;
+}
+
+.changeUnit {
+  text-align: center;
+  padding: 10px;
+}
+
+footer {
+  text-align: center;
 }
