@@ -58,6 +58,14 @@ ul {
 
 .units {
   font-size: 20px;
+  position: relative;
+  top: -10px;
+}
+p {
+  display: inline;
+  font-size: 20px;
+  position: relative;
+  top: -10px;
 }
 
 .card-title {
