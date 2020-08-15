@@ -47,13 +47,13 @@ ul {
 .currentConditions {
   font-style: italic;
   font-size: 18px;
-  margin-left: 38px;
+  margin-left: 72px;
 }
 
 #currentEmoji {
   margin-top: 30px;
-  margin-left: 20px;
-  width: 90px;
+  margin-left: 50px;
+  width: 100px;
 }
 
 .units {
