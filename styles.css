@@ -38,10 +38,11 @@ ul {
   display: block;
 }
 
-.currentTemp {
+#currentTemp {
   font-weight: bold;
   font-size: 40px;
 }
+
 #currentEmoji {
   width: 100px;
 }
