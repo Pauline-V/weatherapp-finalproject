@@ -45,9 +45,10 @@ ul {
 }
 
 .currentConditions {
+  position: relative;
   font-style: italic;
   font-size: 15px;
-  margin-left: 72px;
+  margin-left: 75px;
 }
 
 #currentEmoji {
