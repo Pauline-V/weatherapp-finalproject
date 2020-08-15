@@ -23,14 +23,12 @@ ul {
 .currentCity {
   font-weight: bold;
   font-size: 38px;
-  margin-left: 38px;
 }
 
 .currentDate {
   font-size: 15px;
   font-style: italic;
   font-weight: lighter;
-  margin-left: 38px;
 }
 
 #currentDetails {
@@ -40,10 +38,14 @@ ul {
 
 #currentTemp {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 38px;
 }
-
+h3 {
+  font-size: 30px;
+}
 #currentEmoji {
+  margin-top: 20px;
+  margin-left: 20px;
   width: 100px;
 }
 
