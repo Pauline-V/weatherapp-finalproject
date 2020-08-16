@@ -41,8 +41,7 @@ ul {
 #currentTemp {
   display: inline;
   font-weight: bold;
-  font-size: 38px;
-  margin-top: 50px;
+  font-size: 45px;
   margin-left: 30px;
 }
 
@@ -59,15 +58,15 @@ ul {
 }
 
 .units {
-  font-size: 18px;
+  font-size: 13px;
   position: relative;
-  top: -12px;
+  top: -18px;
 }
 p {
   display: inline;
-  font-size: 20px;
+  font-size: 13px;
   position: relative;
-  top: -10px;
+  top: -18px;
 }
 .card {
   text-align: center;
@@ -90,11 +89,7 @@ p {
   margin: 0 auto;
 }
 
-.changeUnit {
-  text-align: center;
-  padding-top: 20px;
-}
-
 footer {
   text-align: center;
+  font-size: 12px;
 }

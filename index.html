@@ -53,17 +53,20 @@
             </ul>
           </div>
           <div class="col-6">
-            <img
-              src="weather_icons_dovora_interactive/PNG/128/day_clear.png"
-              id="currentEmoji"
-            />
-            <div id="currentTemp">
-              30 <a href="" class="units">°C</a>
-              <p>|</p>
-              <a href="" class="units">°F</a>
+            <div class="float-right">
+              <br />
+              <img
+                src="weather_icons_dovora_interactive/PNG/128/day_clear.png"
+                id="currentEmoji"
+              />
+              <div id="currentTemp">
+                30 <a href="" class="units" id="changeToCelsius">°C</a>
+                <p>|</p>
+                <a href="" class="units" id="changeToFahr">°F</a>
+              </div>
+              <br /><br />
+              <span class="currentConditions">Sunny</span>
             </div>
-            <br /><br />
-            <span class="currentConditions">Sunny</span>
           </div>
         </div>
         <br />
@@ -121,18 +124,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="changeUnit">
-          <button
-            type="button"
-            class="btn btn-info btn-sm"
-            id="changeToCelsius"
-          >
-            °C
-          </button>
-          <button type="button" class="btn btn-info btn-sm" id="changeToFahr">
-            °F
-          </button>
         </div>
       </span>
       <footer>
