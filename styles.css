@@ -26,7 +26,7 @@ ul {
 }
 
 .currentDate {
-  font-size: 18px;
+  font-size: 17px;
   font-style: italic;
   font-weight: 200;
   padding-bottom: 10px;
@@ -45,11 +45,12 @@ ul {
   margin-left: 30px;
 }
 
-.currentConditions {
+.description {
   position: relative;
   font-style: italic;
   font-size: 15px;
   margin-left: 25px;
+  text-transform: capitalize;
 }
 
 #currentEmoji {
