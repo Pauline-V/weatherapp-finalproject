@@ -56,6 +56,8 @@ function currentWeather(response) {
   let description = document.querySelector(".description");
   let currentEmoji = document.querySelector("#currentEmoji");
 
+  celsiusTemp = Math.round(response.data.main.temp);
+
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   currentCity.innerHTML = response.data.name;
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
@@ -80,10 +82,10 @@ function submit(event) {
   searchCity(cityInput.value);
 }
 
-searchCity("London");
-
 let form = document.querySelector("#searchCity");
 form.addEventListener("submit", submit);
+
+searchCity("London");
 
 //current Position button
 function currentPosition(position) {
@@ -99,3 +101,30 @@ function getLoc() {
 
 let button = document.querySelector("#changetoCurrentLoc");
 button.addEventListener("click", getLoc);
+
+//conversion to Fahrenheit
+
+function changeTemptoFahr(event) {
+  event.preventDefault();
+  let tempFahr = (celsiusTemp * 9) / 5 + 32;
+  linktoCelsius.classList.remove("active");
+  linktoFahr.classList.add("active");
+  let currentTemperature = document.querySelector("#currentTemp");
+  currentTemperature.innerHTML = Math.round(tempFahr);
+}
+
+let linktoFahr = document.querySelector("#changeToFahr");
+linktoFahr.addEventListener("click", changeTemptoFahr);
+
+let celsiusTemp = null;
+
+function changeTemptoCelsius(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#currentTemp");
+  linktoFahr.classList.remove("active");
+  linktoCelsius.classList.add("active");
+  currentTemperature.innerHTML = celsiusTemp;
+}
+
+let linktoCelsius = document.querySelector("#changeToCelsius");
+linktoCelsius.addEventListener("click", changeTemptoCelsius);

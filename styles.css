@@ -38,8 +38,11 @@ ul {
   display: block;
 }
 
-#currentTemp {
+.weatherCond {
   display: inline;
+}
+
+#currentTemp {
   font-weight: bold;
   font-size: 45px;
   margin-left: 30px;
@@ -62,11 +65,19 @@ ul {
   position: relative;
   top: -18px;
 }
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
 p {
   display: inline;
   font-size: 13px;
-  position: relative;
-  top: -18px;
 }
 .card {
   text-align: center;
