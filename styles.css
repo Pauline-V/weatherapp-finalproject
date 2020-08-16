@@ -21,7 +21,7 @@ ul {
 }
 
 .currentCity {
-  font-weight: bold;
+  font-weight: 100;
   font-size: 38px;
 }
 
@@ -39,28 +39,29 @@ ul {
 }
 
 #currentTemp {
+  display: inline;
   font-weight: bold;
   font-size: 38px;
   margin-top: 50px;
+  margin-left: 30px;
 }
 
 .currentConditions {
   position: relative;
   font-style: italic;
   font-size: 15px;
-  margin-left: 75px;
+  margin-left: 25px;
 }
 
 #currentEmoji {
   margin-top: 30px;
-  margin-left: 50px;
   width: 100px;
 }
 
 .units {
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
-  top: -10px;
+  top: -12px;
 }
 p {
   display: inline;
@@ -68,12 +69,15 @@ p {
   position: relative;
   top: -10px;
 }
-
+.card {
+  text-align: center;
+  border-radius: 10px;
+}
 .card-title {
   font-size: 18px;
 }
 .forecast {
-  font-size: 25px;
+  font-size: 22px;
   font-style: italic;
 }
 .forecastTemp {
@@ -88,7 +92,7 @@ p {
 
 .changeUnit {
   text-align: center;
-  padding: 10px;
+  padding-top: 20px;
 }
 
 footer {

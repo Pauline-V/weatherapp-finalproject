@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Weather App!</title>
-    <link rel="stylesheet" href="styles.css" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -42,7 +43,7 @@
         <br /><br />
 
         <div class="row">
-          <div class="col" id="currentDetails">
+          <div class="col-5" id="currentDetails">
             <ul>
               <li class="currentCity">Paris</li>
               <li class="currentDate">Jeudi 6 Aout, 19:40</li>
@@ -51,17 +52,18 @@
               <li>Wind: <span id="wind">4mph</span></li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col-6">
             <img
               src="weather_icons_dovora_interactive/PNG/128/day_clear.png"
               id="currentEmoji"
-            /><br /><br />
+            />
+            <div id="currentTemp">
+              30 <a href="" class="units">°C</a>
+              <p>|</p>
+              <a href="" class="units">°F</a>
+            </div>
+            <br /><br />
             <span class="currentConditions">Sunny</span>
-          </div>
-          <div class="col" id="currentTemp">
-            30 <a href="" class="units">°C</a>
-            <p>|</p>
-            <a href="" class="units">°F</a>
           </div>
         </div>
         <br />
@@ -71,14 +73,7 @@
         <hr />
 
         <div class="card-deck">
-          <div
-            class="card"
-            style="
-              text-align: center;
-              background-color: #ffffff;
-              border-radius: 10px;
-            "
-          >
+          <div class="card">
             <div class="card-body">
               <h5 class="card-title">Friday</h5>
               <div class="card-text">
@@ -90,14 +85,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="card"
-            style="
-              text-align: center;
-              background-color: #ffffff;
-              border-radius: 10px;
-            "
-          >
+          <div class="card">
             <div class="card-body">
               <h5 class="card-title">Saturday</h5>
               <div class="card-text">
@@ -109,14 +97,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="card"
-            style="
-              text-align: center;
-              background-color: #ffffff;
-              border-radius: 10px;
-            "
-          >
+          <div class="card" z>
             <div class="card-body">
               <h5 class="card-title">Sunday</h5>
               <div class="card-text">
@@ -128,14 +109,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="card"
-            style="
-              text-align: center;
-              background-color: #ffffff;
-              border-radius: 10px;
-            "
-          >
+          <div class="card">
             <div class="card-body">
               <h5 class="card-title">Monday</h5>
               <div class="card-text">
