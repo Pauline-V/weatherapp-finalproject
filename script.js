@@ -42,9 +42,8 @@ function time(timestamp) {
   let hours = today.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
-
-    return `${hours}:${minutes}`;
   }
+  return `${hours}:${minutes}`;
 }
 
 //Current Weather
@@ -140,6 +139,7 @@ function changeTemptoFahr(event) {
   linktoCelsius.classList.remove("active");
   linktoFahr.classList.add("active");
   let currentTemperature = document.querySelector("#currentTemp");
+  let forecastTemperature = document.querySelector("#currentTemp");
   currentTemperature.innerHTML = Math.round(tempFahr);
 }
 
