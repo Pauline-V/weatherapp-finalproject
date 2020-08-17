@@ -45,10 +45,11 @@
         <br /><br />
 
         <div class="row">
-          <div class="col-5" id="currentDetails">
+          <div class="col-6" id="currentDetails">
             <ul>
               <li class="currentCity"></li>
-              <li class="currentDate"></li>
+              <li id="update">Updated: <span class="currentDate"></span></li>
+
               <li>Feels like: <span id="feelsLike"></span>°C</li>
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind: <span id="wind"></span>km/h</li>
@@ -57,10 +58,7 @@
           <div class="col-6">
             <div class="float-right">
               <br />
-              <img
-                src="media/weather_icons_dovora_interactive/PNG/128/day_clear.png"
-                id="currentEmoji"
-              />
+              <img src="" id="currentEmoji" />
               <div class="weatherCond">
                 <strong id="currentTemp"></strong>
                 <span class="units">
@@ -80,56 +78,7 @@
         </h2>
         <hr />
 
-        <div class="card-deck">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Friday</h5>
-              <div class="card-text">
-                <img
-                  src="media/weather_icons_dovora_interactive/PNG/128/cloudy.png"
-                  class="forecastEmoji"
-                />
-                <div class="forecastTemp"><strong>37° </strong>22°</div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Saturday</h5>
-              <div class="card-text">
-                <img
-                  src="media/weather_icons_dovora_interactive/PNG/128/rain_thunder.png"
-                  class="forecastEmoji"
-                />
-                <div class="forecastTemp"><strong>37° </strong>22°</div>
-              </div>
-            </div>
-          </div>
-          <div class="card" z>
-            <div class="card-body">
-              <h5 class="card-title">Sunday</h5>
-              <div class="card-text">
-                <img
-                  src="media/weather_icons_dovora_interactive/PNG/128/day_partial_cloud.png"
-                  class="forecastEmoji"
-                />
-                <div class="forecastTemp"><strong>37° </strong>22°</div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Monday</h5>
-              <div class="card-text">
-                <img
-                  src="media/weather_icons_dovora_interactive/PNG/128/day_clear.png"
-                  class="forecastEmoji"
-                />
-                <div class="forecastTemp"><strong>37° </strong>22°</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="card-deck" id="forecast"></div>
       </span>
       <footer>
         <a

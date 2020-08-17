@@ -1,7 +1,7 @@
 //Current Date
 
-function today(data) {
-  let today = new Date();
+function today(timestamp) {
+  let today = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -25,6 +25,16 @@ function today(data) {
     "November",
     "December",
   ];
+
+  let day = days[today.getDay()];
+  let month = months[today.getMonth()];
+  let date = today.getDate();
+
+  return `${day}, ${date} ${month} ${time(timestamp)}`;
+}
+
+function time(timestamp) {
+  let today = new Date(timestamp);
   let minutes = today.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -32,22 +42,16 @@ function today(data) {
   let hours = today.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
+
+    return `${hours}:${minutes}`;
   }
-
-  let day = days[today.getDay()];
-  let time = hours + `:` + minutes;
-  let month = months[today.getMonth()];
-  let date = today.getDate();
-
-  return `${day}, ${date} ${month} ${time}`;
 }
-
-let currentDate = document.querySelector(".currentDate");
-currentDate.innerHTML = today();
 
 //Current Weather
 
 function currentWeather(response) {
+  console.log(response.data);
+  let currentDate = document.querySelector(".currentDate");
   let currentTemperature = document.querySelector("#currentTemp");
   let currentCity = document.querySelector(".currentCity");
   let feelsLike = document.querySelector("#feelsLike");
@@ -58,6 +62,7 @@ function currentWeather(response) {
 
   celsiusTemp = Math.round(response.data.main.temp);
 
+  currentDate.innerHTML = today(response.data.dt * 1000);
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   currentCity.innerHTML = response.data.name;
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
@@ -70,10 +75,38 @@ function currentWeather(response) {
   );
 }
 
+function displayforecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+
+  for (let index = 0; index < 5; index++) {
+    let forecast = response.data.list[index];
+    forecastElement.innerHTML += `<div class="card">
+      <div class="card-body">
+        <h5 class="card-title">${time(forecast.dt * 1000)}</h5>
+          <div class="card-text">
+            <img
+               src="https://openweathermap.org/img/wn/${
+                 forecast.weather[0].icon
+               }@2x.png"
+               class="forecastEmoji"
+                />
+          <div class="forecastTemp">${Math.round(forecast.main.temp)}°</div>
+         </div>
+        </div>
+    </div>
+  `;
+  }
+}
+
 function searchCity(city) {
   let apiKey = `91de7449ab8633be763a2c086e4ca924`;
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
   axios.get(apiURL).then(currentWeather);
+
+  apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayforecast);
 }
 
 function submit(event) {
@@ -84,8 +117,6 @@ function submit(event) {
 
 let form = document.querySelector("#searchCity");
 form.addEventListener("submit", submit);
-
-searchCity("London");
 
 //current Position button
 function currentPosition(position) {
@@ -103,7 +134,6 @@ let button = document.querySelector("#changetoCurrentLoc");
 button.addEventListener("click", getLoc);
 
 //conversion to Fahrenheit
-
 function changeTemptoFahr(event) {
   event.preventDefault();
   let tempFahr = (celsiusTemp * 9) / 5 + 32;
@@ -128,3 +158,5 @@ function changeTemptoCelsius(event) {
 
 let linktoCelsius = document.querySelector("#changeToCelsius");
 linktoCelsius.addEventListener("click", changeTemptoCelsius);
+
+searchCity("London");
