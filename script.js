@@ -139,7 +139,6 @@ function changeTemptoFahr(event) {
   linktoCelsius.classList.remove("active");
   linktoFahr.classList.add("active");
   let currentTemperature = document.querySelector("#currentTemp");
-  let forecastTemperature = document.querySelector("#currentTemp");
   currentTemperature.innerHTML = Math.round(tempFahr);
 }
 
